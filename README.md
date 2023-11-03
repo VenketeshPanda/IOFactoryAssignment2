@@ -1,5 +1,4 @@
-# IOFactory Assignment 2
-**MAX PROFIT PROBLEM**
+# MAX PROFIT PROBLEM
 
 
 Intuition: 
