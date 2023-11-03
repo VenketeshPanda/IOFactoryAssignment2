@@ -4,13 +4,14 @@
 Intuition: 
 
 
--> When I first approached the problem, I thought of going with the greedy approach. Taking the property which has the highest earnings in a given time. But under some conditions it failed.
+-> Initially, I considered a greedy approach, where I would select the property with the highest earnings within a given time frame. However, this approach proved ineffective under certain conditions.
 
--> So, I thought of trying out all the combinations of the properties and come up with the solution which gave the maximum earnings.
+-> I then decided to explore a different strategy: trying out all possible combinations of properties to find the one that yielded the maximum earnings.
 
--> I came up with the recursive approach to solve this problem. (Solution 1)
+-> I developed a recursive approach to solve the problem (Solution 1). The solution being: I pick a property(Add the earnings of the property to the total sum) if the time taken to build is <= the timeUnit given, and similarly move on to the next one. And I don't pick one property and move on to next one, and at the end we take the max of both of them. Doing this recursively will give equal chance to all the properties whose time is <= given timeUnit. 
 
--> Here I have given the recursive solution and then improved the space complexity by using dynamic programming. (Solution 2)
+-> Afterward, I further optimized the space complexity by implementing dynamic programming (Solution 2).
 
--> I have added both the solutions in Solution 1 and Solution 2 files. Solution 2 being the most optimal with **_TC:O(N*timeUnit)_** and **_SC:O(N*timeUnit)_**
+-> I've documented both solutions in separate files, with Solution 2 being the most efficient, offering a time complexity of O(N*timeUnit) and a space complexity of O(N*timeUnit).
 
+-> We can even cut down the space from O(N*timeUnit)+O(N) to O(N*timeUnit) by using tabulation. Since we have a fixed number of elements in our,i.e. 3(Theatre, Pub, Commercial Park), the space complexity stays to be constant.
