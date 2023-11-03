@@ -4,7 +4,7 @@
 Intuition: 
 
 
--> At the first look at the question, I thought of going with greedy approach. Taking the property which has the highest earnings in a given time. But under some condition it failed.
+-> When I first approached the problem, I thought of going with the greedy approach. Taking the property which has the highest earnings in a given time. But under some conditions it failed.
 
 -> So, I thought of trying out all the combinations of the properties and come up with the solution which gave the maximum earnings.
 
