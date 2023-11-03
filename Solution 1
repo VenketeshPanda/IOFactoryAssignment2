@@ -1,0 +1,26 @@
+//Approach 1 : Recursively trying all the combinations(Bottom up approach) and give the max value. 
+//TC:O(2^N) SC: O(N)
+#include <bits/stdc++.h> 
+int helper(int ind,int w,vector<int> &timeTaken, vector<int> &earnings){
+	if(ind==0){
+		if(timeTaken[0]<=w) return earnings[0];
+		else return 0;
+	}
+	int take = helper(ind-1,w,timeTaken,earnings);
+	int notTake=INT_MIN;
+	if(timeTaken[ind]<=w){
+		notTake = earnings[ind]+helper(ind-1,w-timeTaken[ind],timeTaken,earnings);
+	}
+	
+	return max(take,notTake);
+}
+
+int main() 
+{
+    int n=3;
+    int timeUnit=13;
+    vector<int> timeTaken={5,4,10};
+    vector<int> earnings={1500,1000,3000};
+	  cout<<"Maximum value for time unit: "<<timeUnit<<" = "<<helper(n-1,timeUnit,timeTaken,earnings);
+}
+
