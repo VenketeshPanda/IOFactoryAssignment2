@@ -1,0 +1,31 @@
+//Approach 2: Using Dynamic Programming(Bottom up approach) to improve the time complexity
+//TC:O(N*timeUnit) SC: O(N*timeUnit) + O(N)
+
+#include <bits/stdc++.h> 
+int helper(int ind,int w,vector<vector<int>> &dp,vector<int> &timeTaken, vector<int> &earnings){
+	if(ind==0){
+		if(timeTaken[0]<=w) return earnings[0];
+		else return 0;
+	}
+    if(dp[ind][w]!=-1) return dp[ind][w];
+	int take = helper(ind-1,w,dp,timeTaken,earnings);
+	int notTake=INT_MIN;
+	if(timeTaken[ind]<=w){
+		notTake = earnings[ind]+helper(ind-1,w-timeTaken[ind],dp,timeTaken,earnings);
+	}
+	
+	return dp[ind][w]=max(take,notTake);
+}
+
+int main() 
+{
+    int n=3;
+    int timeUnit=13;
+    vector<int> timeTaken={5,4,10};
+    vector<int> earnings={1500,1000,3000};
+    vector<vector<int>> dp( n , vector<int> (timeUnit+1, -1)); 
+	  cout<<"Maximum value for time unit: "<<timeUnit<<" = "<<helper(n-1,timeUnit,dp,timeTaken,earnings);
+} 
+
+//We can even cut down the space from O(N*timeUnit)+O(N) to O(N*timeUnit) by using tabulation. 
+//Since we have a fixed number of elements in our,i.e. 3(Theatre, Pub, Commercial Park), the space complexity stays to be constant. 
