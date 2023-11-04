@@ -15,3 +15,6 @@ Intuition:
 -> I've documented both solutions in separate files, with Solution 2 being the most efficient, offering a time complexity of O(N*timeUnit) and a space complexity of O(N*timeUnit).
 
 -> We can even cut down the space from O(N*timeUnit)+O(N) to O(N*timeUnit) by using tabulation. Since we have a fixed number of elements in our,i.e. 3(Theatre, Pub, Commercial Park), the space complexity stays to be constant.
+
+
+**NOTE: I have written the code in C++ as it is my primary coding language. I have fair knowledge in javascript and java as well. **
