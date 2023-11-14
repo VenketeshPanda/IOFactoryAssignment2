@@ -18,3 +18,14 @@ Intuition:
 
 
 **NOTE: I have written the code in C++ as it is my primary coding language. I have fair knowledge in javascript and java as well. **
+
+_**Updated Solution:**_
+
+-> I have to generate all the combinations of the property and not just the max one.
+
+-> I have followed the same intuition as per my Solution 1 and 2. The only update I have done is I have added an extra array "currentCombination" and it contains the current combination of the properties. 
+
+-> If we pick an element then it marks 1 and if we don't pick an element it marks 0. Similarly at the end it has the combination and we print it. We do it for all the possible combinations.
+
+-> Time Complexity: O(2^N). Space Complexity: O(N). Since N is constant(i.e., 3) so overall time and space is also constant.
+
