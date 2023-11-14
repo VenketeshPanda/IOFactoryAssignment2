@@ -19,6 +19,11 @@ Intuition:
 
 **NOTE: I have written the code in C++ as it is my primary coding language. I have fair knowledge in javascript and java as well. **
 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 _**Updated Solution:**_
 
 -> I have to generate all the combinations of the property and not just the max one.
