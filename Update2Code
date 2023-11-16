@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void printCombinations(int ind, int w, vector<int> &timeTaken, vector<int> &earnings, vector<int> &currentCombination, vector<char> &prop, int &totalEarnings) {
+    if (ind == 0) {
+        if (timeTaken[0] <= w) {
+            currentCombination.push_back(1);
+            totalEarnings += earnings[0];
+        } else {
+            currentCombination.push_back(0);
+        }
+        int x = 0;
+        for (int i = currentCombination.size() - 1; i >= 0; i--) {
+            cout << prop[x++] << ": " << currentCombination[i] << " ";
+        }
+        cout << "Earnings " << totalEarnings << endl;
+
+        totalEarnings -= earnings[0]; 
+        currentCombination.pop_back();
+        return;
+    }
+
+    currentCombination.push_back(0);
+    printCombinations(ind - 1, w, timeTaken, earnings, currentCombination, prop, totalEarnings);
+    currentCombination.pop_back();
+
+    if (timeTaken[ind] <= w) {
+        currentCombination.push_back(1);
+        totalEarnings += earnings[ind];
+        printCombinations(ind - 1, w - timeTaken[ind], timeTaken, earnings, currentCombination, prop, totalEarnings);
+        totalEarnings -= earnings[ind]; 
+        currentCombination.pop_back();
+    }
+}
+
+int main() {
+    int n = 3;
+    int timeUnit = 8;
+    vector<int> timeTaken = {5, 4, 10};
+    vector<int> earnings = {1500, 1000, 3000};
+    vector<int> currentCombination;
+    vector<char> prop = {'T', 'P', 'C'};
+
+    int totalEarnings = 0; 
+    printCombinations(n - 1, timeUnit, timeTaken, earnings, currentCombination, prop, totalEarnings);
+
+    return 0;
+}
