@@ -38,7 +38,7 @@ _**Updated Solution:**_
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 _**Updated Solution:**_
 
--> **File name: Update2Code**
+-> **File name: FinalUpdatedCode**
 
 -> Along with the currentCombinations array, I carried a variable along to capture the earnings for every combination. 
 
