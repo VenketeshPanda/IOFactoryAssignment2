@@ -34,3 +34,14 @@ _**Updated Solution:**_
 
 -> Time Complexity: O(2^N). Space Complexity: O(N). Since N is constant(i.e., 3) so overall time and space is also constant.
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+_**Updated Solution:**_
+
+-> **File name: Update2Code**
+
+-> Along with the currentCombinations array, I carried a variable along to capture the earnings for every combination. 
+
+-> Used backtracking for the earnings as well to manage calculating for all the combinations.
+
+-> The time and space complexity stands O(2^N) and O(N) respectively.
